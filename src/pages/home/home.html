@@ -7,9 +7,33 @@
 </ion-header>
 
 <ion-content padding>
-  <ion-item>
-    <ion-input type="number" #setCursor placeholder="00 mins" clearInput></ion-input>
-  </ion-item>
+    <ion-grid>
+        <ion-row>
+            <ion-col>
+                <ion-item>
+                    HH
+                  </ion-item>
+            </ion-col>
+            <ion-col>
+                <ion-item>
+                    mm
+                  </ion-item>
+            </ion-col>
+          </ion-row>
+        <ion-row> 
+          <ion-col>
+              <ion-item>
+                  <ion-input type="number" #setCursor  (input)='onInputTime($event.target.value)'  placeholder="00 Hours" clearInput></ion-input>
+              </ion-item>
+          </ion-col>
+          :
+          <ion-col>
+              <ion-item>
+                  <ion-input type="number" #setCursorMinute placeholder="00 Mins" clearInput></ion-input>
+              </ion-item>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
   <ion-item>
     current time
   </ion-item>
