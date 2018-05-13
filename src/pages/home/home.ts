@@ -1,5 +1,6 @@
 import { Component, OnInit,ViewChild } from '@angular/core';
 import { NavController } from 'ionic-angular';
+import { Keyboard } from '@ionic-native/keyboard';
 
 @Component({
   selector: 'page-home',
@@ -7,7 +8,7 @@ import { NavController } from 'ionic-angular';
 })
 export class HomePage implements OnInit{
   @ViewChild('setCursor') cursorSet ;
-  constructor(public navCtrl: NavController) {
+  constructor(public navCtrl: NavController,private keyboard: Keyboard) {
     
   }
 
@@ -15,6 +16,7 @@ export class HomePage implements OnInit{
   ngOnInit() {
     setTimeout(() => {
       this.cursorSet.setFocus();
+      this.keyboard.show();
     },150);
 
  }
