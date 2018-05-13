@@ -17,7 +17,7 @@ export class HomePage implements OnInit{
     console.log(e.length);
     if(e.length===2){
       setTimeout(() => {
-        this.cursorSetMin.setFocus();
+        this.cursorSetMin.setFocus(); 
       },150);
     }
 
