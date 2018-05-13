@@ -25,11 +25,11 @@
               <ion-item>
                   <ion-input type="number" #setCursor  (input)='onInputTime($event.target.value)'  placeholder="00 Hours" clearInput></ion-input>
               </ion-item>
-          </ion-col>
+          </ion-col> 
           :
           <ion-col>
               <ion-item>
-                  <ion-input type="number" #setCursorMinute placeholder="00 Mins" clearInput></ion-input>
+                  <ion-input type="tel" #setCursorMinute placeholder="00 Mins" maxlength="2" clearInput></ion-input>
               </ion-item>
           </ion-col>
         </ion-row>
