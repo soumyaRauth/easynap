@@ -23,13 +23,13 @@
         <ion-row> 
           <ion-col>
               <ion-item>
-                  <ion-input type="number" #setCursor  (input)='onInputTime($event.target.value)'  placeholder="00 Hours" clearInput></ion-input>
+                  <ion-input type="tel" #setCursor  (input)='onInputTime($event.target.value)' [(ngModel)]="hour"  placeholder="00 Hours" clearInput></ion-input>
               </ion-item>
           </ion-col> 
           :
           <ion-col>
               <ion-item>
-                  <ion-input type="tel" #setCursorMinute placeholder="00 Mins" maxlength="2" clearInput></ion-input>
+                  <ion-input type="number" #setCursorMinute placeholder="00 Mins" (input)='onInputHour($event.target.value)' [(ngModel)]="mins"  clearInput></ion-input>
               </ion-item>
           </ion-col>
         </ion-row>
@@ -41,6 +41,6 @@
     Adjucted time
   </ion-item>
   <ion-item>
-    <button ion-button block>Set Nap</button>
+    <button ion-button block (click)="setAlarm()">Set Nap</button>
   </ion-item>
 </ion-content>
